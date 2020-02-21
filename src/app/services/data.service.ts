@@ -29,6 +29,11 @@ export class DataService {
 
       return noticia as Noticia;
     });
+
+    this.data = this.data.sort((a, b) => {
+      return +new Date(b.fecha) - +new Date(a.fecha);
+    });
+
   }// DataService constructor
 
   setData(data: Array<Noticia>): void {

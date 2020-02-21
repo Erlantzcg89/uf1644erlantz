@@ -37,7 +37,7 @@ export class FormularioComponent implements OnInit {
 
     this.formulario = this.builder.group({
       id: new FormControl(0),
-      fecha: new FormControl(new Date().toLocaleString()),
+      fecha: new FormControl(new Date().toLocaleString().replace(/\//g, '-')),
       titulo: new FormControl('titulo de la noticia', Validators.compose([Validators.required])),
       imagen: new FormControl('https://i.ytimg.com/vi/xi5MliaC7uI/maxresdefault.jpg', Validators.compose([Validators.required])),
       resumen: new FormControl('resumen', Validators.compose([Validators.required])),
