@@ -1,13 +1,29 @@
 <div class="contenedor">
+
+  <h1 class="text-center">NOTICIAS</h1>
+
   <section>
-    <h2>Listado</h2>
+    <!-- <h2>Listado</h2> -->
 
     <ul class="listado list-group">
-      <div *ngFor="let p of pruebas">
-        <a target="_blank" routerLink="/detalle/{{p.id}}">
+      <div *ngFor="let n of noticias">
+        <a routerLink="/detalle/{{n.id}}">
+
+
+
           <li class="item-listado list-group-item">
-            <span class="">{{p.titulo}}</span>
+            <div class="row">
+              <div class="col-12 col-sm-2"><img src="{{n.imagen}}" alt="{{n.titulo}}" class="imagen-listado"></div>
+              <div class="col-12 col-sm-10"><span class="text-danger">[{{n.fecha}}] </span><span
+                  class="">{{n.titulo}}</span></div>
+            </div>
+            <div class="row">
+              <p class="texto-corto text-dark">
+                {{n.textoCorto}}
+              </p>
+            </div>
           </li>
+
         </a>
       </div>
     </ul>

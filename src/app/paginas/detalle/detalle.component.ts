@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DataService } from 'src/app/services/data.service';
-import { Prueba } from 'src/app/model/prueba';
+import { Noticia } from 'src/app/model/noticia';
 
 @Component({
   selector: 'app-detalle',
@@ -11,8 +11,8 @@ import { Prueba } from 'src/app/model/prueba';
 export class DetalleComponent implements OnInit {
 
   id: number;
-  pruebas: Array<Prueba>;
-  detalle: Prueba;
+  noticias: Array<Noticia>;
+  detalle: Noticia;
 
   constructor(private route: ActivatedRoute, private dao: DataService) {
 
@@ -23,9 +23,9 @@ export class DetalleComponent implements OnInit {
       return this.id = +params['id'];
     });
 
-    this.pruebas = dao.getData();
+    this.noticias = dao.getData();
 
-    this.detalle = this.pruebas.find(el => {
+    this.detalle = this.noticias.find(el => {
       console.log('iteraciones: ' + el.id);
       return el.id === this.id;
     });

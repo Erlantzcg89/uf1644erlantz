@@ -2,6 +2,10 @@
   padding: 0 30px 30px;
 }
 
+h1 {
+  margin-top: 20px;
+}
+
 h2 {
   margin-bottom: 10px;
 }
@@ -21,4 +25,8 @@ section {
 a:hover {
   color: white;
   text-decoration: none;
+}
+
+.imagen-listado {
+  max-width: 100px;
 }

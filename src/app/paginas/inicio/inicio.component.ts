@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Prueba } from 'src/app/model/prueba';
+import { Noticia } from 'src/app/model/noticia';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
@@ -9,11 +9,11 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class InicioComponent implements OnInit {
 
-  pruebas: Array<Prueba>;
+  noticias: Array<Noticia>;
 
   constructor(private dao: DataService) {
     console.debug('InicioComponent constructor');
-    this.pruebas = dao.getData();
+    this.noticias = dao.getData();
   }// InicioComponent constructor
 
   ngOnInit() {

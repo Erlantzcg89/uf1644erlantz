@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-formulario',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioComponent implements OnInit {
 
-  constructor() { }
+  constructor(private builder: FormBuilder,
+    private dataService: DataService) { }// FormularioComponent constructor
 
   ngOnInit() {
-  }
+  }// FormularioComponent ngOnInit
 
-}
+}// FormularioComponent
