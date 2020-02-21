@@ -1,5 +1,16 @@
 <div class="contenedor">
   <section>
     <h2>Listado</h2>
+
+    <ul class="listado list-group">
+      <div *ngFor="let p of pruebas">
+        <a target="_blank" routerLink="/detalle/{{p.id}}">
+          <li class="item-listado list-group-item">
+            <span class="">{{p.titulo}}</span>
+          </li>
+        </a>
+      </div>
+    </ul>
+
   </section>
 </div>

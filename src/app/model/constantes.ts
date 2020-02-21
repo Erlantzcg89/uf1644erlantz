@@ -1,7 +1,7 @@
 export const RUTAS = [
     {
         'ruta': 'inicio',
-        'nombre': 'Inicio',
+        'nombre': 'Listado',
         'icono': ''
     },
     {

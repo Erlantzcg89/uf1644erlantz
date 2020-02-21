@@ -3,7 +3,7 @@ export interface IPrueba {
     titulo: string;
 }
 
-export class prueba implements IPrueba {
+export class Prueba implements IPrueba {
     id: number;
     titulo: string;
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Prueba } from 'src/app/model/prueba';
+import { PRUEBAS } from 'src/app/model/constantes';
 
 @Component({
   selector: 'app-inicio',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
-  constructor() { }
+  pruebas: Array<Prueba>;
+
+  constructor() {
+    console.debug('InicioComponent constructor');
+    this.pruebas = PRUEBAS;
+  }// InicioComponent constructor
 
   ngOnInit() {
-  }
+    console.debug('InicioComponent ngOnInit');
+  }// InicioComponent ngOnInit
 
-}
+}// InicioComponent

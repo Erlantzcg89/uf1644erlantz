@@ -1,5 +1,5 @@
 .contenedor {
-  padding: 20px 20px 20px;
+  padding: 0 30px 30px;
 }
 
 h2 {
@@ -11,4 +11,14 @@ section {
   border-radius: 5px;
   padding: 20px 15px 10px;
   margin-top: 30px;
+}
+
+.item-listado:hover {
+  background-color: rgb(93, 189, 93);
+
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
 }
