@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Prueba } from 'src/app/model/prueba';
-import { PRUEBAS } from 'src/app/model/constantes';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-inicio',
@@ -11,9 +11,9 @@ export class InicioComponent implements OnInit {
 
   pruebas: Array<Prueba>;
 
-  constructor() {
+  constructor(private dao: DataService) {
     console.debug('InicioComponent constructor');
-    this.pruebas = PRUEBAS;
+    this.pruebas = dao.getData();
   }// InicioComponent constructor
 
   ngOnInit() {
