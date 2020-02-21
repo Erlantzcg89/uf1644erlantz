@@ -1,13 +1,30 @@
 <div class="contenedor">
+
+  <div *ngIf="alerta" class="mensage alert alert-{{alerta.tipo}} alert-dismissible" role="alert">
+    {{alerta.cuerpo}}
+  </div>
+
   <section>
-    <form [formGroup]="formulario" (ngSubmit)="enviar(formulario.value)">
+    <form [formGroup]="formulario" (ngSubmit)="guardar(formulario.value)">
       <div class="form-group">
         <input formControlName="titulo" spellcheck="false" type="text" class="form-control" placeholder="Titulo">
       </div>
 
       <div class="form-group">
-        <textarea formControlName="Texto" spellcheck="false" class="form-control" rows="3"
+        <input formControlName="imagen" spellcheck="false" type="text" class="form-control" placeholder="Imagen">
+      </div>
+
+      <div class="form-group">
+        <input formControlName="resumen" spellcheck="false" type="text" class="form-control" placeholder="Resumen">
+      </div>
+
+      <div class="form-group">
+        <textarea formControlName="texto" spellcheck="false" class="form-control" rows="3"
           placeholder="Texto"></textarea>
+      </div>
+
+      <div class="form-group">
+        <input formControlName="url" spellcheck="false" type="text" class="form-control" placeholder="Url">
       </div>
 
       <input type="submit" [disabled]="formulario.invalid" class="btn btn-primary btn-block" value="Guardar">
